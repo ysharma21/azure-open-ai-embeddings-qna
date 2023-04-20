@@ -100,28 +100,28 @@
     },
     "OpenAIEngine": {
       "type": "string",
-      "defaultValue": "text-davinci-003",
+      "defaultValue": "ystest-gpt4",
       "metadata": {
         "description": "OpenAI Engine"
       }
     },
     "OpenAIDeploymentType": {
       "type": "string",
-      "defaultValue": "Text",
+      "defaultValue": "Chat",
       "metadata": {
         "description": "OpenAI Deployment Type. Text for an Instructions based deployment (text-davinci-003). Chat for a Chat based deployment (gpt-35-turbo or gpt-4-32k or gpt-4)."
       }
     },
     "OpenAIEmbeddingsEngineDoc": {
       "type": "string",
-      "defaultValue": "text-embedding-ada-002",
+      "defaultValue": "ystest-code-search-babbage-code-001",
       "metadata": {
         "description": "OpenAI Embeddings Engine for Documents"
       }
     },
     "OpenAIEmbeddingsEngineQuery": {
       "type": "string",
-      "defaultValue": "text-embedding-ada-002",
+      "defaultValue": "ystest-code-search-babbage-code-001",
       "metadata": {
         "description": "OpenAI Embeddings Engine for Queries"
       }
