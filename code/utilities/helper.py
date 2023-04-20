@@ -55,9 +55,14 @@ class LLMHelper:
         self.api_base = openai.api_base
         self.api_version = openai.api_version
         self.index_name: str = "embeddings"
-        self.model: str = os.getenv('OPENAI_EMBEDDINGS_ENGINE_DOC', "text-embedding-ada-002")
-        self.deployment_name: str = os.getenv("OPENAI_ENGINE", os.getenv("OPENAI_ENGINES", "text-davinci-003"))
-        self.deployment_type: str = os.getenv("OPENAI_DEPLOYMENT_TYPE", "Text")
+        # self.model: str = os.getenv('OPENAI_EMBEDDINGS_ENGINE_DOC', "text-embedding-ada-002")
+        self.model: str = os.getenv('OPENAI_EMBEDDINGS_ENGINE_DOC', "ystest-code-search-babbage-code-001")
+        
+        # self.deployment_name: str = os.getenv("OPENAI_ENGINE", os.getenv("OPENAI_ENGINES", "text-davinci-003"))
+        self.deployment_name: str = os.getenv("OPENAI_ENGINE", os.getenv("OPENAI_ENGINES", "ystest-gpt4"))
+        
+        # self.deployment_type: str = os.getenv("OPENAI_DEPLOYMENT_TYPE", "Text")
+        self.deployment_type: str = os.getenv("OPENAI_DEPLOYMENT_TYPE", "Chat")
 
         # Vector store settings
         self.vector_store_address: str = os.getenv('REDIS_ADDRESS', "localhost")
